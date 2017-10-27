@@ -112,15 +112,15 @@ $MAJOR.$MINOR.$SECURITY.$PATCH
 
 +++
 
-- JEP 222: jshell: The Java Shell (Read-Eval-Print Loop) |
-- JEP 228: Add More Diagnostic Commands |
-- JEP 231: Remove Launch-Time JRE Version Selection |
-- **JEP 238: Multi-Release JAR Files** |
-- JEP 240: Remove the JVM TI hprof Agent |
+- JEP 222: jshell: The Java Shell (Read-Eval-Print Loop)
+- JEP 228: Add More Diagnostic Commands
+- JEP 231: Remove Launch-Time JRE Version Selection
+- **JEP 238: Multi-Release JAR Files**
+- JEP 240: Remove the JVM TI hprof Agent
 - JEP 241: Remove the jhat Tool	|
-- **JEP 245: Validate JVM Command-Line Flag Arguments** |
-- JEP 247: Compile for Older Platform Versions |
-- JEP 282: jlink: The Java Linker |
+- **JEP 245: Validate JVM Command-Line Flag Arguments**
+- JEP 247: Compile for Older Platform Versions
+- JEP 282: jlink: The Java Linker
 
 ---
 
@@ -150,3 +150,54 @@ The jdk.certpath.disabledAlgorithms security property is enhanced with several n
 
 JEP 229: Create PKCS12 Keystores by Default
 Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible, standard, and widely supported format for storing cryptographic keys. PKCS12 keystores improve confidentiality by storing private keys, trusted public key certificates, and secret keys. This feature also opens opportunities for interoperability with other systems such as Mozilla, Microsoft's Internet Explorer, and OpenSSL that support PKCS12.
+
+---
+
+## What’s New for Javadoc in JDK 9?
+
++++
+
+- JEP 221: Simplified Doclet API	
+- **JEP 224: HTML5 Javadoc**
+- JEP 225: Javadoc Search	
+- JEP 261: Module System
+
+---
+
+## And now's the time for more interesting changes!
+
+---
+
+## What’s New for the JVM in JDK 9
+
++++
+
+- JEP 165: Compiler Control
+- JEP 197: Segmented Code Cache	
+- JEP 276: Dynamic Linking of Language-Defined Object Models
+
+---
+
+## What’s New for JVM Tuning in JDK 9
+
++++
+
+- Improve G1 Usability, Determinism, and Performance	
+- JEP 158: Unified JVM Logging	
+- JEP 214: Remove GC Combinations Deprecated in JDK 8	
+- **JEP 248: Make G1 the Default Garbage Collector**
+- JEP 271: Unified GC Logging	
+- JEP 291: Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector
+
+---
+
+## What’s New for Core Libraries in JDK 9?
+
+---
+
+## And remember:
+>New is always better!
+>Barney Stinson	
+
+
+
