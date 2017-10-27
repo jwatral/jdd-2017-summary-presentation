@@ -211,18 +211,16 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 [benchmarks](http://cr.openjdk.java.net/~shade/density/state-of-string-density-v1.txt)
 [report](http://cr.openjdk.java.net/~huntch/string-density/reports/String-Density-SPARC-jbb2005-Report.pdf)
 
-- the String Density JDK shows a 21% reduction in live data (retained bytes
-  after a GC) in the Java heap versus a JDK 9 baseline, (363 MB for String Density, 458 MB for
-  baseline JDK 9) |
-- 23% longer amount of time between in GC events during the heaviest load of benchmark
-  execution, (29 seconds for String Density JDK, 23.5 seconds for JDK 9 baseline) |
-- the String Density JDK observed about 12% lower GC time than that of the baseline JDK 9, (430 ms for
-  String Density, 490 ms for baseline JDK 9) |
-- the String Density JDK realized about a 10% improvement in throughput
-  performance score versus the baseline JDK 9, (37002 for String Density JDK, 33403 for baseline
-  JDK 9)
+<ul>
+<li class="fragment">**21%** reduction in live data (retained bytes after a GC) (363 MB vs 458 MB)</li>
+<li class="fragment">**23%** longer amount of time between in GC events during the heaviest load of benchmark execution, (29 seconds vs 23.5)</li>
+<li class="fragment">**12%** lower GC time (430 ms vs 490 ms)</li>
+<li class="fragment">**10%** improvement in throughput performance score (37002, 33403)</li>
+</ul>
 
 Note:
+Looks promising, can be biased though. Time will tell.
+
 In JEP 192: String Deduplication in G1 (JDK 8) some other improvement was added
 
 In terms of memory footprint reduction, the amount of live data during heaviest load of the
@@ -271,6 +269,10 @@ Set<String> set = Set.of("a", "b", "c");
 @[9-11](#screamingDoubleFacePalm)
 @[13](#stillFacePalm)
 @[15](Well done JAVA... C# had this function since like... forever?)
+
++++
+
+![my reaction was like](https://media.giphy.com/media/BC3RANWyJtlgA/giphy.gif)
 
 ---
 
