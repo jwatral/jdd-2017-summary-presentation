@@ -164,6 +164,31 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 
 ---
 
+## What’s New for Internationalization in JDK 9?
+
+---
+
+- JEP 267: Unicode 8.0	
+- JEP 252: CLDR Locale Data Enabled by Default	
+- JEP 226: UTF-8 Properties Files
+
+---
+
+## And the last bunch of "boring" changes:
+## What’s New for Client Technologies in JDK 9
+
++++
+
+- JEP 251: Multi-Resolution Images	
+- JEP 253: Prepare JavaFX UI Controls and CSS APIs for Modularization	
+- JEP 256: BeanInfo Annotations	
+- JEP 262: TIFF Image I/O	
+- JEP 263: HiDPI Graphics on Windows and Linux	
+- JEP 272: Platform-Specific Desktop Features	
+- JEP 283: Enable GTK 3 on Linux	
+
+---
+
 ## And now's the time for more interesting changes!
 
 ---
@@ -192,6 +217,22 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 ---
 
 ## What’s New for Core Libraries in JDK 9?
+
++++
+
+- JEP 102: Process API Updates	
+- JEP 193: Variable Handles	
+- JEP 254: Compact Strings	
+- JEP 264: Platform Logging API and Service	
+- JEP 266: More Concurrency Updates	
+- JEP 268: XML Catalogs	
+- JEP 269: Convenience Factory Methods for Collections	
+- JEP 274: Enhanced Method Handles	
+- JEP 277: Enhanced Deprecation	
+- JEP 285: Spin-Wait Hints	
+- JEP 290: Filter Incoming Serialization Data	
+- JEP 259: Stack-Walking API	
+- JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP	
 
 ---
 
