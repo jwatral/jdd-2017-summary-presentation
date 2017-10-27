@@ -197,7 +197,8 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 
 ## And remember:
 >New is always better!
->Barney Stinson	
+
+<span style="font-size:0.6em; color:gray; float:right;">Barney Stinson</span>
 
 
 
