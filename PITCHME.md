@@ -270,9 +270,7 @@ Set<String> set = Set.of("a", "b", "c");
 @[13](#stillFacePalm)
 @[15](Well done JAVA... C# had this function since like... forever?)
 
-+++
-
-![my reaction was like](https://media.giphy.com/media/BC3RANWyJtlgA/giphy.gif)
++++?image=https://media.giphy.com/media/BC3RANWyJtlgA/giphy.gif
 
 ---
 
