@@ -6,10 +6,10 @@
 
 +++
 
-- JDD 2017 Summary                          
+- JDD 2017 Summary                          |
 - JVM9                                      |
 - TOP10 security vulnerabilities in WebApps |
-- NGNIX & Lua                               |
+- NGNIX & Lua*                              |
 
 ---
 
@@ -137,7 +137,7 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 
 ## What’s New for Internationalization in JDK 9?
 
----
++++
 
 - JEP 267: Unicode 8.0	
 - JEP 252: CLDR Locale Data Enabled by Default	
@@ -199,7 +199,7 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 - JEP 268: XML Catalogs	
 - **JEP 269: Convenience Factory Methods for Collections**
 - JEP 274: Enhanced Method Handles	
-- JEP 277: Enhanced Deprecation	
+- **JEP 277: Enhanced Deprecation**	
 - JEP 285: Spin-Wait Hints	
 - JEP 290: Filter Incoming Serialization Data	
 - JEP 259: Stack-Walking API	
@@ -244,6 +244,16 @@ String Density JDK.
 
 +++
 
+#### JEP 277: Enhanced Deprecation	
+
+```java
+@Deprecated(since="9", forRemoval=true)
+```
+
+New tool available - `jdeprscan`
+
++++
+
 #### JEP 269: Convenience Factory Methods for Collections
      
 ```java
@@ -270,7 +280,7 @@ Set<String> set = Set.of("a", "b", "c");
 @[13](#stillFacePalm)
 @[15](Well done JAVA... C# had this function since like... forever?)
 
-+++?image=https://media.giphy.com/media/BC3RANWyJtlgA/giphy.gif
++++?image=https://media.giphy.com/media/BC3RANWyJtlgA/giphy.gif&size=auto 50%
 
 ---
 
