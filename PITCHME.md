@@ -52,35 +52,6 @@ try (resource1;
 @[3-7](Old way)
 @[9-13](New and improved try-with-resources statement in Java SE 9)
 
-+++
-
-#### JEP 269: Convenience Factory Methods for Collections
-     
-```java
-Set<String> set = new HashSet<>();
-set.add("a");
-set.add("b");
-set.add("c");
-set = Collections.unmodifiableSet(set);
-
-Set<String> set = Collections.unmodifiableSet(new HashSet<>(Arrays.asList("a", "b", "c")));
-
-Set<String> set = Collections.unmodifiableSet(new HashSet<String>() {{
-    add("a"); add("b"); add("c");
-}});
-
-Set<String> set = Collections.unmodifiableSet(Stream.of("a", "b", "c").collect(toSet()));
-
-Set<String> set = Set.of("a", "b", "c");
-```
-
-@[1-5](#facePalm)
-@[7](#facePalm2)
-@[9-11](#screamingDoubleFacePalm)
-@[13](#stillFacePalm)
-@[15](Well done JAVA... C# had this function since like... forever?)
-
----
 
 ### Key Changes in JDK 9
 
@@ -222,17 +193,84 @@ Modifies the default keystore type from JKS to PKCS12. PKCS#12 is an extensible,
 
 - JEP 102: Process API Updates	
 - JEP 193: Variable Handles	
-- JEP 254: Compact Strings	
+- **JEP 254: Compact Strings**	
 - JEP 264: Platform Logging API and Service	
 - JEP 266: More Concurrency Updates	
 - JEP 268: XML Catalogs	
-- JEP 269: Convenience Factory Methods for Collections	
+- **JEP 269: Convenience Factory Methods for Collections**
 - JEP 274: Enhanced Method Handles	
 - JEP 277: Enhanced Deprecation	
 - JEP 285: Spin-Wait Hints	
 - JEP 290: Filter Incoming Serialization Data	
 - JEP 259: Stack-Walking API	
 - JEP 255: Merge Selected Xerces 2.11.0 Updates into JAXP	
+
++++
+
+#### JEP 254: Compact Strings
+[benchmarks](http://cr.openjdk.java.net/~shade/density/state-of-string-density-v1.txt)
+[report](http://cr.openjdk.java.net/~huntch/string-density/reports/String-Density-SPARC-jbb2005-Report.pdf)
+
+- the String Density JDK shows a 21% reduction in live data (retained bytes
+  after a GC) in the Java heap versus a JDK 9 baseline, (363 MB for String Density, 458 MB for
+  baseline JDK 9) |
+- 23% longer amount of time between in GC events during the heaviest load of benchmark
+  execution, (29 seconds for String Density JDK, 23.5 seconds for JDK 9 baseline) |
+- the String Density JDK observed about 12% lower GC time than that of the baseline JDK 9, (430 ms for
+  String Density, 490 ms for baseline JDK 9) |
+- the String Density JDK realized about a 10% improvement in throughput
+  performance score versus the baseline JDK 9, (37002 for String Density JDK, 33403 for baseline
+  JDK 9)
+
+Note:
+In JEP 192: String Deduplication in G1 (JDK 8) some other improvement was added
+
+In terms of memory footprint reduction, the amount of live data during heaviest load of the
+benchmark execution, the String Density JDK shows a 21% reduction in live data (retained bytes
+after a GC) in the Java heap versus a JDK 9 baseline, (363 MB for String Density, 458 MB for
+baseline JDK 9).
+In terms of the frequency of GC, the String Density JDK allowed the application to execute
+23% longer amount of time between in GC events during the heaviest load of benchmark
+execution, (29 seconds for String Density JDK, 23.5 seconds for JDK 9 baseline). Since the
+workload is run for a specific amount of wall clock time, the total number of GC events observed
+with the String Density is about 17% fewer, (15 for String Density, 18 for baseline JDK 9).
+STRING DENSITY 1
+Secondarily, in terms of the amount of time spent in GC when under peak load, the String
+Density JDK observed about 12% lower GC time than that of the baseline JDK 9, (430 ms for
+String Density, 490 ms for baseline JDK 9). And, in terms of the throughput performance score
+at peak load, the String Density JDK realized about a 10% improvement in throughput
+performance score versus the baseline JDK 9, (37002 for String Density JDK, 33403 for baseline
+JDK 9).
+Hence, in all metrics observed as goals for the experiment there is an improvement with the
+String Density JDK. 
+
++++
+
+#### JEP 269: Convenience Factory Methods for Collections
+     
+```java
+Set<String> set = new HashSet<>();
+set.add("a");
+set.add("b");
+set.add("c");
+set = Collections.unmodifiableSet(set);
+
+Set<String> set = Collections.unmodifiableSet(new HashSet<>(Arrays.asList("a", "b", "c")));
+
+Set<String> set = Collections.unmodifiableSet(new HashSet<String>() {{
+    add("a"); add("b"); add("c");
+}});
+
+Set<String> set = Collections.unmodifiableSet(Stream.of("a", "b", "c").collect(toSet()));
+
+Set<String> set = Set.of("a", "b", "c");
+```
+
+@[1-5](#facePalm)
+@[7](#facePalm2)
+@[9-11](#screamingDoubleFacePalm)
+@[13](#stillFacePalm)
+@[15](Well done JAVA... C# had this function since like... forever?)
 
 ---
 
